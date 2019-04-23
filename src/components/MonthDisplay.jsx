@@ -3,12 +3,12 @@ import MonthSelection from './MonthSelection';
 import MonthData from './MonthData';
 
 function MonthDisplay() {
-	return (
-		<div>
-			<MonthSelection />
-			<MonthData />
-		</div>
-	);
+  return (
+    <div>
+      <MonthSelection />
+      <MonthData />
+    </div>
+  );
 }
 
 export default MonthDisplay;

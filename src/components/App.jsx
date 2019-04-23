@@ -6,15 +6,15 @@ import MonthDisplay from './MonthDisplay';
 import Footer from './Footer';
 
 function App() {
-	return (
-		<div>
-			<Header />
-			<Intro />
-			<DayDisplay />
-			<MonthDisplay />
-			<Footer />
-		</div>
-	);
+  return (
+    <div>
+      <Header />
+      <Intro />
+      <DayDisplay />
+      <MonthDisplay />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

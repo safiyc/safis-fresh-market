@@ -54,6 +54,16 @@ module.exports = {
             "styled-jsx/babel"
           ]
         }
+      },
+      {
+        test: /\.(png|gif|jp(e*)g|svg)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 8000, // if img > 8MB, then file-loader used instead of url-loader
+            name: 'images/[hash]-[name].[ext]'
+          }
+        }
       }
     ]
   },

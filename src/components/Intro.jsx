@@ -6,6 +6,12 @@ function Intro() {
       <style jsx>{`
         h3 {
           text-align: center;
+          height: 100vh;
+          margin-top: 0;
+          background: orange;
+        }
+        p {
+          padding: 0 6px;
         }
       `}</style>
       <h3>Intro</h3>

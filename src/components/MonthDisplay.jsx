@@ -273,17 +273,31 @@ const availableProduce = [
 function MonthDisplay() {
   return (
     <div>
+      <style jsx>{`
+        .produce-columns {
+          columns: 3 auto;
+          background-color: lightgreen;
+          padding: 15px 5px;
+          margin-top: -13px;
+        }
+        .item {
+          background: linear-gradient(to right, rgba(255,255,0,1) 0%,rgba(125,185,232,0) 100%);
+          margin: 0 auto 15px;
+          padding-left: 10px;
+        }
+      `}</style>
+      <h2>Our Produce Availability Throughout the Year</h2>
       {availableProduce.map((data, index) => {
         return (
           <div key={index}>
             <MonthData month={data.month} />
-            {data.selection.map((el, index) => {
-              return (
-                <div key={index}>
-                  <p>{el}</p>
-                </div>
-              );
-            })}
+            <div className="produce-columns">
+              {data.selection.map((el, index) => {
+                return (
+                  <p key={index} className="item">{el}</p>
+                );
+              })}
+            </div>
           </div>
         );
       })}

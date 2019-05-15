@@ -4,10 +4,39 @@ import PropTypes from 'prop-types';
 function DayData(props) {
   return (
     <div>
-      <h3>{props.day}</h3>
-      <p>{props.location}</p>
-      <p>{props.hours}</p>
-      <p>{props.booth}</p>
+      <style jsx>{`
+        .day {
+          max-width: 165px;
+          margin: 0 auto;
+          line-height: 30px;
+          padding-left: 5px;
+          position: relative;
+          background: orange;
+          height: 0;
+          border-left: 15px solid transparent;
+          border-right: 150px solid transparent;
+          border-top: 55px solid yellow;
+          box-shadow: 0 1px 0 2px rgba(0,0,0,.75);
+        }
+        .day span {
+          font-weight: 600;
+          font-size: 30px;
+          position: absolute;
+          bottom: 6px;
+          color: black;
+          text-shadow: 0 0 2px rgba(255,255,255,.75);
+        }
+        .day-content {
+          max-width: 300px;
+          margin: 0 auto;
+        }
+      `}</style>
+      <p className="day"><span>{props.day}</span></p>
+      <div className="day-content">
+        <p>Location: {props.location}</p>
+        <p>Hours: {props.hours}</p>
+        <p>Booth: {props.booth}</p>
+      </div>
     </div>
   );
 }

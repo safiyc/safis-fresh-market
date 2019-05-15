@@ -9,6 +9,14 @@ import { Switch, Route } from 'react-router-dom';
 function App() {
   return (
     <div>
+      <style jsx global>{`
+        * {
+          font-family: Verdana, sans-serif;
+        }
+        h1, h2, h3, h4 {
+          text-align: center;
+        }
+      `}</style>
       <Header />
       <Switch>
         <Route exact path='/' component={Intro} />

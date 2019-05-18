@@ -21,6 +21,11 @@ function Intro() {
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit libero nam excepturi sit quibusdam. Eveniet beatae inventore nemo laboriosam voluptas!
       </p>
+      <div>
+        ....
+        contact component?
+        ....
+      </div>
     </div>
   );
 }

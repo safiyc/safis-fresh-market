@@ -7,52 +7,40 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    resolve(__dirname, "src", "index.jsx")
+    resolve(__dirname, 'src') + '/index.jsx'
   ],
-
   output: {
     filename: 'app.bundle.js',
-    path: resolve(__dirname, 'build'),
-    publicPath: '/'
+    path: resolve(__dirname, 'build')
   },
-
   resolve: {
     extensions: ['.js', '.jsx']
   },
-
   devtool: '#source-map',
-
   devServer: {
     hot: true,
-    contentBase: resolve(__dirname, 'build'),
-    publicPath: '/'
+    contentBase: resolve(__dirname, 'build')
   },
 
   module: {
     rules: [
       {
         test: /\.jsx?$/,
-        enforce: "pre",
-        loader: "eslint-loader",
+        enforce: 'pre',
+        loader: 'eslint-loader',
         exclude: /node_modules/,
         options: {
           emitWarning: true,
-          configFile: "./.eslintrc.json"
+          configFile: './.eslintrc.json'
         }
       },
       {
         test: /\.jsx?$/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: [
-            ["es2015", { "modules": false }],
-            "react"
-          ],
-          plugins: [
-            "react-hot-loader/babel",
-            "styled-jsx/babel"
-          ]
+          presets: [['es2015', { modules: false }], 'react'],
+          plugins: ['react-hot-loader/babel', 'styled-jsx/babel']
         }
       },
       {
@@ -60,8 +48,8 @@ module.exports = {
         use: {
           loader: 'url-loader',
           options: {
-            limit: 8000, // if img > 8MB, then file-loader used instead of url-loader
-            name: 'images/[hash]-[name].[ext]'
+            limit: 8000,
+            name: 'image/[hash]-[name].[ext]'
           }
         }
       }

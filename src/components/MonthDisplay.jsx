@@ -279,9 +279,15 @@ function MonthDisplay() {
           background-color: lightgreen;
           padding: 15px 5px;
           margin-top: -13px;
+          background: linear-gradient(to bottom, rgba(144,238,144,1) 70%,rgba(144,238,144,.25) 100%);
         }
         .item {
-          background: linear-gradient(to right, rgba(255,255,0,1) 0%,rgba(125,185,232,0) 100%);
+          box-shadow: inset -1px 3px 4px 3px rgba(255,255,255,.3);
+          text-align: center;
+          height: 25px;
+          line-height: 25px;
+          background: linear-gradient(10deg, rgba(255,255,0,.35) 0%, rgba(255,255,0,.85) 30%,rgba(125,185,232,0) 60%);
+          background: linear-gradient(10deg, rgba(255,255,0,.35) 0%, rgba(255,255,0,.55) 20%, rgba(255,165,0,.75) 50%, rgba(255,165,0,.05) 80%);
           margin: 0 auto 15px;
           padding-left: 10px;
         }

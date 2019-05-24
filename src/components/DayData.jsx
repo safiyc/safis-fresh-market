@@ -27,8 +27,12 @@ function DayData(props) {
           text-shadow: 0 0 2px rgba(255,255,255,.75);
         }
         .day-content {
-          max-width: 300px;
+          max-width: 319px;
           margin: 0 auto;
+          background-color: lightgreen;
+          padding: 15px 10px;
+          margin-bottom: 15px;
+          background: linear-gradient(to bottom, rgba(144,238,144,1) 70%,rgba(144,238,144,.25) 100%);
         }
       `}</style>
       <p className="day"><span>{props.day}</span></p>

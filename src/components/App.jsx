@@ -5,6 +5,7 @@ import DayDisplay from './DayDisplay';
 import MonthDisplay from './MonthDisplay';
 import Footer from './Footer';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import Error404 from './Error404';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
             <Route exact path='/' component={Intro} />
             <Route path='/daydisplay' component={DayDisplay} />
             <Route path='/monthdisplay' component={MonthDisplay} />
+            <Route component={Error404} />
           </Switch>
         </div>
       </Router>
